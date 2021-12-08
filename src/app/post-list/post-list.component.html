@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <span>Posts List</span>
+</mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let p of posts" [routerLink]="['/view-post', p.id]">
+    <div mat-line>{{p.title}}</div>
+    <div mat-line> {{p.created_at}} </div>
+  </mat-list-item>
+</mat-list>
